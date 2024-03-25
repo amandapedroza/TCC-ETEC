@@ -17,7 +17,7 @@ export default function Login({navigation})
 
             <View>
 
-                <Image style={css.logo__image} source={require('../assets/logo.png')}/>
+                <Image style={css.logo__image} source={require('../assets/img/logo.png')}/>
                
 
             </View>

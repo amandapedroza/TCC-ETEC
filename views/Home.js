@@ -8,7 +8,7 @@ export default function Home({navigation})
     return(
 
         <ImageBackground style={css.login__imageback}
-        source={require('../assets/fundohome.png')}>
+        source={require('../assets/img/fundohome.png')}>
 
 
 

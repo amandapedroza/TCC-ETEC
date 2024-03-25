@@ -102,14 +102,14 @@ const css = StyleSheet.create({
     login__input:{ // Inputs dos formularios
         width: 350,
         borderWidth: 2, // Adiciona a borda para todas as direções
-        borderColor: '#6ED8CB',
+        borderColor: 'rgba(110, 216, 203, 0.75)',
         borderRadius: 15,
         fontSize:  19,
         padding: 7,
         marginBottom: 10,
         fontWeight: 'bold',
         color: "#fff",
-        backgroundColor: '#91EADF'
+        backgroundColor: 'rgba(110, 216, 203, 0.50)'
     
     },
     login__button:{ // Botão de entrar

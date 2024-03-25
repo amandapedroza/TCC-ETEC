@@ -12,6 +12,13 @@ export default function Registro()
     
         <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={[css.container, css.darkbg]}> 
 
+
+        
+        <View>
+            <Image style={css.logo__image} source={require('../assets/img/logomenor.png')}/>
+        </View>
+
+
         <View style={css.login__form}> 
 
         <Text style={css.text_form}> Seu E-mail:</Text>
@@ -28,23 +35,7 @@ export default function Registro()
         <Text  style={css.text_form}>Data de nascimento:</Text>
         <TextInput style={css.login__input} placeholder='Digite o nome do(a) bebê' />
 
-        <Text  style={css.text_form}>Sexo:</Text>
-
-
-        <View style={css.sexo_botao}>
-        
-        
-        <TouchableOpacity style={css.sexo_botao1} onPress={()=>setDisplay(value= 'flex')}>
-                    <Image source={require('../assets/feminino.png')}/>
-                </TouchableOpacity>
-
-         <TouchableOpacity  onPress={()=>setDisplay(value= 'flex')}>
-                    <Image source={require('../assets/masculino.png')}/>
-                </TouchableOpacity>
-                </View>
-        
-
-               
+           
                 <TouchableOpacity style={css.cadastrar__button} onPress={()=>setDisplay(value= 'flex')}>
                     <Text style={css.login__buttonText}>Entrar</Text>
                 </TouchableOpacity>
