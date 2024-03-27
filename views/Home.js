@@ -21,7 +21,7 @@ export default function Home({navigation})
 
     
              <TouchableOpacity  style={css.entrarButton}  onPress={() => navigation.navigate('Login', )}> 
-             <Text style={css.entrarTextButton}>      Entrar       </Text>
+             <Text style={css.entrarTextButton}>     Entrar     </Text>
                 </TouchableOpacity>             
         
     </View>

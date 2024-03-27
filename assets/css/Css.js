@@ -27,14 +27,20 @@ const css = StyleSheet.create({
 
     //COMEÇO DA PAGINA INICIAL (HOME)
 
+    botoeshome: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: '160%'
+    },
+
     cadastrobutton:{ 
         
-        marginRight: 200,
         padding: 10,
         backgroundColor: '#6ED8CB',
         borderRadius: 15,
-        marginTop:650
-       
+        marginRight: '10%'
+
 
     },
 
@@ -42,17 +48,13 @@ const css = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         fontSize: 25,
+        
     },
 
     entrarButton:{
-        marginTop: 650,
-        marginLeft:225,
-        position:'absolute',
         backgroundColor: 'rgba(110, 216, 203, 0.75)',
         padding: 10,
-        borderRadius: 20
-
-        
+        borderRadius: 15
     },
 
     entrarTextButton:{
