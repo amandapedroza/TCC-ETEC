@@ -27,16 +27,17 @@ const css = StyleSheet.create({
 
     //COMEÇO DA PAGINA INICIAL (HOME)
 
-    botoeshome: {
+    botoeshome: {   //Botões de cadastro e entrar
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        marginTop: '160%'
+        marginTop: '160%',
+        
     },
 
-    cadastrobutton:{ 
+    cadastrobutton:{ //Botão de cadastro
         
-        padding: 10,
+        padding: 8,
         backgroundColor: '#6ED8CB',
         borderRadius: 15,
         marginRight: '10%'
@@ -44,20 +45,20 @@ const css = StyleSheet.create({
 
     },
 
-    cadastroTextButton:{
+    cadastroTextButton:{ //Texto do botão de cadastro
         color: 'white',
         fontWeight: 'bold',
         fontSize: 25,
         
     },
 
-    entrarButton:{
+    entrarButton:{  //Botão de entrar
         backgroundColor: 'rgba(110, 216, 203, 0.75)',
-        padding: 10,
+        padding: 8,
         borderRadius: 15
     },
 
-    entrarTextButton:{
+    entrarTextButton:{  //Texto do botão de entrar
         color: 'white',
         fontWeight: 'bold',
         fontSize: 25
@@ -69,7 +70,7 @@ const css = StyleSheet.create({
 
     // COMEÇO DA PAGINA DE LOGIN 
     
-    darkbg:{
+    darkbg:{  //KeyboardAvoidingView (não deixa o teclado cobrir os componentes)
         marginTop: 5,
 
         
@@ -78,6 +79,7 @@ const css = StyleSheet.create({
     logo__image:{ //Imagem do logo 
         
         marginBottom: 50,
+        
     },
 
 
@@ -138,31 +140,14 @@ const css = StyleSheet.create({
 
     // INICIO DA PAGINA DE CADASTRO
 
-    sexo_botao: {
-        flex: 1,
-        flexDirection: "row"
-    },
-
-    sexo_botao1: {
-     marginRight: 75,
-     marginLeft: 50
-    },
-
-    cadastrar__button: {
+   
+    cadastrar__button: { //Botão de cadastrar 
         marginTop: 200,
         padding: 12,
         backgroundColor: '#6ED8CB',
         alignSelf: 'center',
         borderRadius: 15,
     }
-
-
-
-
-
-
-    
-
 
     // FIM DA PAGINA DE CADASTRO
 
