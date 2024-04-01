@@ -38,7 +38,7 @@ export default function Login({navigation})
                 <Text  style={css.text_form}>Senha:</Text>
                 <TextInput style={css.login__input} placeholder='Digite sua senha' secureTextEntry={true}/>
                
-                <TouchableOpacity style={css.login__button} onPress={()=>setDisplay(value= 'flex')}>
+                <TouchableOpacity style={css.login__button} onPress={() => navigation.navigate('Perfil' )}>
                     <Text style={css.login__buttonText}>  Entrar  </Text>
                 </TouchableOpacity>
              

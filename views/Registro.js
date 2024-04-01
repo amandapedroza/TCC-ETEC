@@ -1,12 +1,28 @@
 import React, {useState, useEffect} from 'react';
-import { KeyboardAvoidingView, TextInput, Text, Image, View, TouchableOpacity, Platform, ImageBackground} from 'react-native';
+import { KeyboardAvoidingView, TextInput, Text, Image, View, TouchableOpacity, Platform, Button, StatusBar} from 'react-native';
 import { css } from '../assets/css/Css';
+import DateTimePicker from '@react-native-community/datetimepicker';
+
 
 export default function Registro()
 {
 
     const [display, setDisplay]=useState( initialState='none');
 
+    const [date, SetDate,] = useState(new Date());
+    const [show, setShow] = useState(false);
+    const [mode, setMode] = useState('date');
+
+
+    const onChange = (e, selectedDate) => {
+        SetDate(selectedDate);
+        setShow(false);
+    }
+
+    const showMode = (modeToShow) => {
+        setShow(true);
+        setMode(modeToShow);
+    }
 
     return(
     
@@ -33,8 +49,23 @@ export default function Registro()
         <TextInput style={css.login__input} placeholder='Digite o nome do(a) bebê' />
 
         <Text  style={css.text_form}>Data de nascimento:</Text>
-        <TextInput style={css.login__input} placeholder='Digite o nome do(a) bebê' />
-
+        <Button title='Selecione a data' onPress={() => showMode("date")}   />
+        
+        {    show && (
+            <DateTimePicker
+            value={date}
+            mode={mode}
+            is24Hour={true}
+            onChange={onChange}
+            dateFormat='dd/MM/yyyy'
+            />
+             
+            )} 
+        
+            <Text>{date.toLocaleString}</Text>
+            <StatusBar style='auto'/>
+         
+        
            
                 <TouchableOpacity style={css.cadastrar__button} onPress={()=>setDisplay(value= 'flex')}>
                     <Text style={css.login__buttonText}>Entrar</Text>

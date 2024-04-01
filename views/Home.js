@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Button, Text, View, TouchableOpacity, Image, ImageBackground, TouchableHighlight} from 'react-native';
+import {Text, View, TouchableOpacity, ImageBackground} from 'react-native';
 import { css } from '../assets/css/Css';
 
 
