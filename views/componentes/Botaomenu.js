@@ -15,7 +15,8 @@ export default class Botaomenu  extends Component {
     const toValue = this.open ? 0 : 1
     Animated.spring(this.animation,{
       toValue,
-      friction: 6,     
+      friction: 6, 
+      useNativeDriver: true    
     }).start();
     this.open = !this.open;
   }
@@ -28,6 +29,7 @@ export default class Botaomenu  extends Component {
             translateY: this.animation.interpolate({
               inputRange:[0,1],
               outputRange:[0,-80]
+              
             })
           }
         ]
