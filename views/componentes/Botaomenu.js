@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native';
 /*importando Ant+enty para utilizar como icon, funcao animated, anima o botao*/
-import {AntDesign, Entypo} from '@expo/vector-icons'
-import { useNavigation } from '@react-navigation/native';
+import {AntDesign, Entypo, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
+
 
 
 
@@ -15,56 +15,61 @@ export default class Botaomenu  extends Component {
     const toValue = this.open ? 0 : 1
     Animated.spring(this.animation,{
       toValue,
-      friction: 6, 
+      friction: 10, 
       useNativeDriver: true    
     }).start();
     this.open = !this.open;
   }
   render(){
-    /*crianda a função para subir os botões de registro, translateY, outputrange vai ficar em cima*/
+
+    //Funcão para o botão saúde
       const heartStyle={
         transform:[
           {scale:this.animation},
           {
             translateY: this.animation.interpolate({
               inputRange:[0,1],
-              outputRange:[0,-80]
+              outputRange:[0,-85]
               
             })
           }
         ]
       }
     
+      //Funcão para o botão sono
       const moonStyle={
         transform:[
           {scale:this.animation},
           {
             translateY: this.animation.interpolate({
               inputRange:[0,1],
-              outputRange:[0,-140]
+              outputRange:[0,-145]
             })
           }
         ]
       }
+
+      //Funcão para o botão alimentação
       const drinkStyle={
         transform:[
           {scale:this.animation},
           {
             translateY: this.animation.interpolate({
               inputRange:[0,1],
-              outputRange:[0,-200]
+              outputRange:[0,-205]
             })
           }
         ]
       }
-    
+      
+      //Funcão para o botão medidas
       const rulerStyle={
         transform:[
           {scale:this.animation},
           {
             translateY: this.animation.interpolate({
               inputRange:[0,1],
-              outputRange:[0,-255]
+              outputRange:[0,-265]
             })
           }
         ]
@@ -72,7 +77,7 @@ export default class Botaomenu  extends Component {
 
 
 
-    /*criando a função para o botão de '+' abrir e fechar*/
+    //Funcão de rotação do botão + 
     const rotation ={
       transform:[
         {
@@ -84,74 +89,121 @@ export default class Botaomenu  extends Component {
       ]
     }
   return(
+
+
     /*criando os botões*/
-    /*acessando através do this.props.style feito no fabbutton no app.js//*/
-    /*a função TouchableWithoutFeedback ta criando o botão na parte debaixo da tela*/
+  
+    
     <View style={[style.container, this.props.style]}>
-      <TouchableWithoutFeedback onPress={()=> alert ('Faça o registro do comprimento do seu baby')}> 
-       <Animated.View style={[style.button, style.submenu,rulerStyle]}>
-      <Entypo name= "ruler" size={20} color={"#FFF"}/>
-      </Animated.View>
+
+      {/* BOTÃO MEDIDAS*/}
+      <TouchableWithoutFeedback > 
+        <Animated.View style={[style.button, style.submenu, style.medidabutton, rulerStyle]}>
+          <Entypo name= "ruler" size={23} color= "#FFF"/>
+        </Animated.View> 
       </TouchableWithoutFeedback>
 
-      <TouchableWithoutFeedback onPress={()=> alert ('faça o registro da alimentação do seu baby')}> 
-       <Animated.View style={[style.button, style.submenu,drinkStyle]}>
-       <Entypo name="drink" size={24} color="#FFF" />
-      </Animated.View>
-      </TouchableWithoutFeedback>
 
-      <TouchableWithoutFeedback onPress={()=> alert ('Faça o registro do sono do seu baby')}> 
-       <Animated.View style={[style.button, style.submenu, moonStyle]}>
-       <Entypo name="moon" size={24} color="#FFF"  />
-      </Animated.View>
+      {/* BOTÃO ALIMENTAÇÃO*/}
+      <TouchableWithoutFeedback> 
+        <Animated.View style={[style.button, style.submenu, style.alimentobutton, drinkStyle]}>
+          <MaterialCommunityIcons name="baby-bottle" size={26} color="#000" />
+        </Animated.View>
       </TouchableWithoutFeedback>
-
-      <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Registro')}> 
-       <Animated.View style={[style.button, style.submenu,heartStyle]}>
-      <AntDesign name= "heart" size={24} color={"#FFF"}/>
-      </Animated.View>
-      </TouchableWithoutFeedback>
-
       
+
+      {/* BOTÃO SONO*/}
+      <TouchableWithoutFeedback> 
+        <Animated.View style={[style.button, style.submenu, style.sonobutton, moonStyle]}>
+          <Entypo name="moon" size={24} color="#000"  />
+        </Animated.View>
+      </TouchableWithoutFeedback>
+
+
+      {/* BOTÃO SAÚDE*/}
+      <TouchableWithoutFeedback> 
+        <Animated.View style={[style.button, style.submenu, style.saudebutton, heartStyle]}>
+          <MaterialIcons name= "medication-liquid" size={26} color={"#000"}/>
+        </Animated.View>
+      </TouchableWithoutFeedback>
+
+
+      {/* BOTÃO +*/}
       <TouchableWithoutFeedback onPress={this.toggleMenu} >
-       <Animated.View style={[style.button, style.menu, rotation]}>
-      <AntDesign name= "plus" size={24} color={"#FFF"}/>
-      </Animated.View>
+        <Animated.View style={[style.button, style.menu, rotation]}>
+          <AntDesign name= "plus" size={24} color={"#fff"}/>
+        </Animated.View>
       </TouchableWithoutFeedback>
 
     </View>
+    
   );
 }
 }
 /*utilizei o onpress para quando clicar em cima do botao + aparecer as opçoes*/
-const style = StyleSheet.create({
-  container:{
+    const style = StyleSheet.create({
+    container:{
     alignItems:'center',
     position: 'absolute'
   },
-/*criando o estilo do botao*/
+
+
+ // Todos os botões 
 button:{
-position:'absolute',
-width: 60,
-height:60,
-borderRadius: 60 / 2,
-justifyContent:'center',
-alignItems:'center',
-shadowRadius:10,
-shadowColor:'#00213B',
-shadowOpacity:0.3,
-shadowOffset:{
-  height: 10,
-}
+  position:'absolute',
+  justifyContent:'center',
+  alignItems:'center',
+  //shadowRadius:10,
+  //shadowColor:'#00213B',
+  //shadowOpacity:0.3,
+  //shadowOffset:{
+    //height: 10,
+  //}
 },
-menu:{
-  backgroundColor:'#00213B'
+
+
+  // Botão +
+menu:{        
+  backgroundColor:'#91EADF', 
+  width: 60,
+  height:60,
+  borderRadius: 60 / 2,              
 },
-/*criando o estilo do submenu, as opçoes para registro*/
+
+
+// Botões que "sobem" após clicar no +
 submenu:{
-  width:48,
-  height:48,
-  borderRadius: 48 / 2,
-  backgroundColor:'#00213B'
-}
+  width:55,
+  height:55,
+  borderRadius: 55 / 2,
+  
+},
+
+
+  // Botão medidas
+medidabutton:{  
+  backgroundColor: '#FFBABA'
+},    
+
+
+  // Botão alimentação
+alimentobutton:{
+  backgroundColor: '#F8FFA5'
+},
+
+
+  // Botão sono
+sonobutton:{
+  backgroundColor: '#D9E8FF'
+},
+
+
+  // Botão saúde
+saudebutton:{
+  backgroundColor: '#CEFFBD'
+},
+
+
+
+
 });

@@ -10,9 +10,9 @@ export default function Home({navigation})
         <ImageBackground style={css.login__imageback}
         source={require('../assets/img/fundohome.png')}>
 
+       
 
-
-    <View style={css.botoeshome} >
+    <View style={css.containerHome} >
             <TouchableOpacity style={css.cadastrobutton} 
                 onPress={() => navigation.navigate('Registro', )}>
                    <Text style={css.cadastroTextButton}> Cadastrar-se </Text>
@@ -25,6 +25,8 @@ export default function Home({navigation})
                 </TouchableOpacity>             
         
     </View>
+
+ 
             
             
     

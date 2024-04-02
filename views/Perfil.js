@@ -15,8 +15,8 @@ const Perfil = () => {
       </View>
       <Text style={css.nome_perfil}>Ana</Text>
       <View style={css.row}>
-        <Text style={css.leftText}>Peso: 3.5 kg</Text>
-        <Text style={css.rightText}>Altura: 50 cm</Text>
+        <Text style={css.peso_texto}>Peso: 3.5 kg</Text>
+        <Text style={css.altura_peso}>Altura: 50 cm</Text>
       </View>
 
     
