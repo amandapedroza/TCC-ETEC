@@ -99,7 +99,7 @@ export default class Botaomenu  extends Component {
       {/* BOTÃO MEDIDAS*/}
       <TouchableWithoutFeedback > 
         <Animated.View style={[style.button, style.submenu, style.medidabutton, rulerStyle]}>
-          <Entypo name= "ruler" size={23} color= "#FFF"/>
+          <Entypo name= "ruler" size={23} color= "#000"/>
         </Animated.View> 
       </TouchableWithoutFeedback>
 
@@ -115,7 +115,7 @@ export default class Botaomenu  extends Component {
       {/* BOTÃO SONO*/}
       <TouchableWithoutFeedback> 
         <Animated.View style={[style.button, style.submenu, style.sonobutton, moonStyle]}>
-          <Entypo name="moon" size={24} color="#000"  />
+          <MaterialCommunityIcons name="cradle" size={27} color="#000" />
         </Animated.View>
       </TouchableWithoutFeedback>
 

@@ -6,11 +6,7 @@ import {StyleSheet} from "react-native";
         alignItems: 'center',
         justifyContent: 'center',
       },
-      text:{
-          backgroundColor:'blue',
-          padding: 20,
-      },
-
+  
 
       
 
@@ -28,19 +24,24 @@ import {StyleSheet} from "react-native";
       //COMEÇO DA PAGINA INICIAL (HOME)
 
       containerHome: {   //Botões de cadastro e entrar
-          flex: 1,
-          flexDirection: 'row',
-          alignItems: 'center',
-          marginTop: '160%',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        bottom: '15%',
+        width: '100%',
+        justifyContent:  "space-between",
+        padding: '5%'
+
+          
           
       },
 
       cadastrobutton:{ //Botão de cadastro
           
-          padding: 8,
-          backgroundColor: '#6ED8CB',
-          borderRadius: 15,
-          marginRight: '10%'
+        padding: 8,
+        backgroundColor: '#6ED8CB',
+        borderRadius: 15,
+
 
 
       },
@@ -53,9 +54,10 @@ import {StyleSheet} from "react-native";
       },
 
       entrarButton:{  //Botão de entrar
-          backgroundColor: 'rgba(110, 216, 203, 0.75)',
-          padding: 8,
-          borderRadius: 15
+        backgroundColor: 'rgba(110, 216, 203, 0.75)',
+        padding: 8,
+        borderRadius: 15
+
       },
 
       entrarTextButton:{  //Texto do botão de entrar
@@ -147,6 +149,7 @@ import {StyleSheet} from "react-native";
         backgroundColor: '#6ED8CB',
         alignSelf: 'center',
         borderRadius: 15,
+
     },
 
     // FIM DA PAGINA DE CADASTRO
@@ -154,83 +157,69 @@ import {StyleSheet} from "react-native";
 
     // INICIO DA PAGINA PERFIL 
 
-        containerPerfil: {   
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginTop: 30,
-          backgroundColor: '#fff', // Cor de fundo para a área do nome, foto, peso e altura
-          borderRadius: 10,
-          padding:100,
-          marginBottom: 20,
-          width: '100%', 
-        },
-
-
-        backgroundContainer: {
-            height:30,
-            position: 'absolute',
-            top:0,
-            left:0,
-            right:0,
-            zIndex:1,
-            marginTop:10,
-        },
-
-
-        profileContainer: {
-            flexDirection: 'row', // Alinha os itens verticalmente
-            justifyContent: 'space-between', // Empurra os itens para as extremidades
-            alignItems: 'center',
-            marginBottom: 10,
-          },
-
           
-        imageContainer: {
-          position: 'absolute',
-          top: 20, // Posição da margem superior para a imagem
-        },
+      containerPerfil: {  
+        flex: 1,
+        padding: 30 ,
+        alignItems: 'center',
+     
+       },
+
+       
+      foto_perfil: {
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        top: '20%'
+      },
 
 
-        foto_perfil: {
-          width: 100,
-          height: 100,
-          borderRadius: 50,
-        },
+      nome_perfil: {
+
+        fontSize: 30,
+        fontWeight: 'bold',
+        color: '#000',
+        top: '5%'
+      },
 
 
-        nome_perfil: {
-          position: 'absolute',
-          top: 150, /*TAMANHO QUE FICA NA PARTE INFERIOR, ABAIXO DA FOTO*/
-          left: 0,
-          right: 0,
-          textAlign: 'center',
-          fontSize: 30,
-          fontWeight: 'bold',
-        },
-        
-      
-        row: {
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          width: '100%',
-          position: 'absolute',
-          top: 100, // Posição da margem superior para o texto do peso e altura
-        },
+      row: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
+        padding: '5%',
+        bottom: '15%'
+       
+      },
 
 
-        peso_texto: {
-          marginLeft: 20,
-        },
+
+      peso_texto: {
+        color: "#8B8B8B",
+        fontWeight: 'bold',
+        fontSize: 18
+      },
 
 
-        altura_peso: {
-          marginRight: 20,
-        },
+
+
+      altura_texto: {
+        color: "#8B8B8B",
+        fontWeight: 'bold',
+        fontSize: 18
+      },
+
+      botao_menu: {
+        left: '45%',
+        bottom: 70
+      }
 
 
       });
 
 
-  export {css};
+
+
+      export {css};
+
