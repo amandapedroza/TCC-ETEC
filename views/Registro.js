@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { KeyboardAvoidingView, TextInput, Text, Image, View, TouchableOpacity, Platform, Button, StatusBar} from 'react-native';
-import { css } from '../assets/css/Css';
+import { css } from '../assets/css/RegistroStyle';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 
@@ -43,7 +43,7 @@ export default function Registro()
         <Text  style={css.text_form}>Crie uma senha:</Text>
         <TextInput style={css.login__input} placeholder='Abcd1234' secureTextEntry={true}/>
 
-        <Text> Dados do(a) bebê:</Text>
+        <Text style={{alignSelf:'flex-start'}}> Dados do(a) bebê:</Text>
 
         <Text  style={css.text_form}>Nome:</Text>
         <TextInput style={css.login__input} placeholder='Digite o nome do(a) bebê' />

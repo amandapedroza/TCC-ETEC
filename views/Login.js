@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { KeyboardAvoidingView, TextInput, Text, Image, View, TouchableOpacity, Platform} from 'react-native';
-import { css } from '../assets/css/Css';
+import { css } from '../assets/css/LoginStyle';
 
 export default function Login({navigation})
 {
@@ -9,8 +9,6 @@ export default function Login({navigation})
 
 
     return(
-  
-
 
         <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={[css.container, css.darkbg]}>
 
@@ -56,6 +54,5 @@ export default function Login({navigation})
            </View>
            
         </KeyboardAvoidingView>
-      
     )
 }

@@ -6,4 +6,4 @@ import Perfil from './Perfil';
 
 
 
-export {Home,Login,Registro, Perfil};
+export {Home,Login,Registro, Perfil,};

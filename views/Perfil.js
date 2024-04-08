@@ -1,102 +1,47 @@
 import React from 'react';
-import { View, Image, Text, Button, StyleSheet, StatusBar } from 'react-native';
-import Botaomenu from './componentes/Botaomenu';
+import { View, Image, Text, Button, StyleSheet, StatusBar,ImageBackground } from 'react-native';
+import Botaomenu,{Aa}  from './componentes/Botaomenu';
+import { css } from '../assets/css/PerfilStyle';
 
 
 
 
-
-const Perfil = () => {
+ export default  Perfil = ({navigation}) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.imageContainer}>
-        <Image source={require('../assets/img/icon.png')} style={styles.image} />
-      </View>
-      <Text style={styles.name}>Ana</Text>
-      <View style={styles.row}>
-        <Text style={styles.leftText}>Peso: 3.5 kg</Text>
-        <Text style={styles.rightText}>Altura: 50 cm</Text>
-      </View>
 
-    
+    <ImageBackground style={css.login__imageback}
+    source={require('../assets/img/fundonuvem.png')}>
 
+    <View style={css.containerPerfil}>
       <View>
-        <Botaomenu style={{ top: 310, left: 140}} />
-        <StatusBar style="auto" />
+        <Image source={require('../assets/img/icon.png')} style={css.foto_perfil} />
+      </View>
+      <Text style={css.nome_perfil}>Ana</Text>
+      <View style={css.row}>
+        <Text style={css.peso_texto}>3.5 kg</Text>
+        <Text style={css.altura_texto}>50 cm</Text>
+      </View>
+
+     
+
+      <View style={css.viewButtom}>
+        {/* coloca a propriedade de navegação dentro do botão */}
+        <Botaomenu style={css.botao_menu} navigation={navigation} /> 
+      </View>
+
+        
         </View>
 
-        </View>
+      </ImageBackground>
        
         );
 };
 
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 30,
-      backgroundColor: '#88f2ed', // Cor de fundo para a área do nome, foto, peso e altura
-      borderRadius: 10,
-      padding:100,
-      marginBottom: 20,
-      width: '100%', 
-    },
-    backgroundContainer: {
-        height:30,
-        backgroundColor: '#88f2ed',
-        position: 'absolute',
-        top:0,
-        left:0,
-        right:0,
-        zIndex:1,
-        marginTop:10,
-    },
-    profileContainer: {
-        flexDirection: 'row', // Alinha os itens verticalmente
-        justifyContent: 'space-between', // Empurra os itens para as extremidades
-        alignItems: 'center',
-        marginBottom: 10,
-      },
-  imageContainer: {
-    position: 'absolute',
-    top: 20, // Posição da margem superior para a imagem
-  },
-  image: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-  },
-  name: {
-    position: 'absolute',
-    top: 150, /*TAMANHO QUE FICA NA PARTE INFERIOR, ABAIXO DA FOTO*/
-    left: 0,
-    right: 0,
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
-  },
-
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: '100%',
-    position: 'absolute',
-    top: 100, // Posição da margem superior para o texto do peso e altura
-  },
-  leftText: {
-    marginLeft: 20,
-    
-  },
-  rightText: {
-    marginRight: 20,
-  },
-});
 
 
-export default Perfil;
+
+
 
 
 
