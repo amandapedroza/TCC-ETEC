@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Image, Text, Button, StyleSheet, StatusBar,ImageBackground } from 'react-native';
+import { View, Image, Text, Button, StyleSheet, StatusBar,ImageBackground, TouchableOpacity } from 'react-native';
 import Botaomenu,{Aa}  from './componentes/Botaomenu';
 import { css } from '../assets/css/PerfilStyle';
+import {Entypo, MaterialIcons} from '@expo/vector-icons'
 
 
 
@@ -14,12 +15,23 @@ import { css } from '../assets/css/PerfilStyle';
 
     <View style={css.containerPerfil}>
       <View>
+        <View style={css.buttonsup}>
+        <MaterialIcons name="settings" size={26} color="#fff"/>
+        <Entypo name="bar-graph" size={26} color="#fff"/>
+        </View>
         <Image source={require('../assets/img/icon.png')} style={css.foto_perfil} />
       </View>
       <Text style={css.nome_perfil}>Ana</Text>
       <View style={css.row}>
-        <Text style={css.peso_texto}>3.5 kg</Text>
-        <Text style={css.altura_texto}>50 cm</Text>
+
+      <TouchableOpacity style={css.medidas_button} onPress={() => navigation.navigate('TelaComprimento')}>
+      <Text style={css.medidas_texto}> Peso + </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={css.medidas_button} onPress={() => navigation.navigate('TelaComprimento')}>
+          <Text style={css.medidas_texto}> Altura + </Text>
+        </TouchableOpacity>
+
       </View>
 
      

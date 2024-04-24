@@ -9,10 +9,16 @@ export const css = StyleSheet.create({
         resizeMode: 'cover'
     },
 
+    buttonsup:{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      padding: '5%',
+    },
 
     containerPerfil: {
         flex: 1,
-        padding: 30,
+        bottom: '2%'
+        
        },
 
        
@@ -20,7 +26,6 @@ export const css = StyleSheet.create({
         width: 100,
         height: 100,
         borderRadius: 50,
-        top: '20%',
         alignSelf: 'center'
       },
 
@@ -30,7 +35,7 @@ export const css = StyleSheet.create({
         fontSize: 30,
         fontWeight: 'bold',
         color: '#000',
-        top: '5%'
+
       },
 
 
@@ -38,18 +43,18 @@ export const css = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: '5%',
-        bottom: '15%'
+        bottom: '25%'
        
       },
 
-      peso_texto: {
-        color: "#8B8B8B",
-        fontWeight: 'bold',
-        fontSize: 18
+      medidas_button: {
+        padding: 6,
+        backgroundColor: '#fff',
+        borderRadius: 15,
       },
 
-      altura_texto: {
-        color: "#8B8B8B",
+      medidas_texto: {
+        color: "#d3d3d3",
         fontWeight: 'bold',
         fontSize: 18
       },
