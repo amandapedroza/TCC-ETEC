@@ -109,7 +109,7 @@ class Botaomenu  extends Component {
 
 
       {/* BOTÃO ALIMENTAÇÃO*/}
-      <TouchableWithoutFeedback> 
+      <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('TelaAlimento', )} > 
         <Animated.View style={[style.button, style.submenu, style.alimentobutton, drinkStyle]}>
           <MaterialCommunityIcons name="baby-bottle" size={26} color="#000" />
         </Animated.View>

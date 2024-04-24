@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Home, Login, Registro, Perfil} from './views';
+import {Home, Login, Registro, Perfil, TelaAlimento} from './views';
 import Botaomenu from './views/componentes/Botaomenu';
 
 
@@ -17,6 +17,7 @@ export default function App() {
         <Stack.Screen name="Registro" options={{headerShown: false}} component={Registro} />
         <Stack.Screen name="Perfil" options={{headerShown: false}} component={Perfil} />
         <Stack.Screen name="Botaomenu" component={Botaomenu} />
+        <Stack.Screen name="TelaAlimento" options={{headerShown: false}} component={TelaAlimento} />
         {/*<Stack.Screen name="AreaRestrita" component={AreaRestrita} />*/}
       </Stack.Navigator>
     </NavigationContainer>
